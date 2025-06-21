@@ -1158,7 +1158,7 @@ print("Public URL:", public_url)
 # Run FastAPI server
 uvicorn.run(app, host="0.0.0.0", port=8000)
 
-router=RouterAgent("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")
+router=RouterAgent("gsk_UZDP83qNdETfsneAsadwhdowuqdhoqhdioqhdoqcvKlnGPiU2c5uqS")
 prompt=input("Prompt")
 file_path="/content/Eco_Paper.pdf"
 router.route(prompt ,file_path)
