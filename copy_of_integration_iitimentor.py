@@ -61,7 +61,7 @@ class QueryBot:
     def __init__(self,
                  json_file="/content/enchanced_first_year.json",
                  embedding_model="all-MiniLM-L6-v2",
-                 groq_api_key="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",
+                 groq_api_key="gsk_Bhj02RbwsSMSTCFYd4K417scxudTboSkoUkfzrjn",
                  model_name="llama-3.1-8b-instant",
                  groq_api_url="https://api.groq.com/openai/v1/chat/completions"):
 
@@ -379,14 +379,14 @@ Give your output in the same format as the input."""
         generated_text= self.generate_ans_paper_text(Text)
         self.text_to_formatted_pdf(generated_text)
 
-# question_bot=QuestionPaperBot("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")
+# question_bot=QuestionPaperBot("gsk_Ur4pXeRVOcvKlnGPiU2c5uqS")
 # question_bot.generate_question_paper("/content/Eco_Paper.pdf")
 
 # question_bot.generate_ans_paper("/content/question_paper.pdf")
 
 #how to use
   # """we will take the prompt and pdf from the user , with the prompt we will decide what bot to choose and in this case , what functon to choose (to generate question or answer)"""
-  # bot = QuestionPaperBot(groq_api_key="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")
+  # bot = QuestionPaperBot(groq_api_key="gsk_UZDP3FYwr4pXeRVOcvKlnGPiU2c5uqS")
   # bot.generate_question_paper(pdf_path="/content/Eco_Paper.pdf")
 
 import os
@@ -940,7 +940,7 @@ Your input: """
 
         print("\n" + formatted_schedule)
 
-# scheduler_bot=Scheduler("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")
+# scheduler_bot=Scheduler("gsk_UZDP84pXeRVOcvKlnGPiU2c5uqS")
 # scheduler_bot.main("i want to make a schedule for today , i have to go to gym for 2hours , study for 3 hours")
 
 import re
@@ -951,7 +951,7 @@ import requests
 
 class RouterAgent:
     def __init__(self, groq_api_key=None, model="llama-3.1-8b-instant"):
-        self.api_key = groq_api_key or os.getenv("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")
+        self.api_key = groq_api_key or os.getenv("gsk_UZDP8cvKlnGPiU2c5uqS")
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
         self.model = model
 
@@ -1105,7 +1105,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-router_agent = RouterAgent("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")
+router_agent = RouterAgent("gsk_UZDP83qNXeRVOcvKlnGPiU2c5uqS")
 #groq api wagera ham code ke andar hi fix kardenge (init ke time i mean)
 @app.post("/route")
 async def route_handler(
@@ -1147,7 +1147,7 @@ async def route_handler(
 import uvicorn
 from pyngrok import ngrok
 import nest_asyncio
-!ngrok authtoken 2xNBjsJZTEMSyZIjuNauqUwXAxK_3YEAxPqFauzLBSHA8EJvn
+!ngrok authtoken 2xNBjsJZXAxK_3YEAxPqFauzLBSHA8EJvn
 # Allow async in Colab
 nest_asyncio.apply()
 
@@ -1158,7 +1158,7 @@ print("Public URL:", public_url)
 # Run FastAPI server
 uvicorn.run(app, host="0.0.0.0", port=8000)
 
-router=RouterAgent("gsk_UZDP83qNdETfsneAsadwhdowuqdhoqhdioqhdoqcvKlnGPiU2c5uqS")
+router=RouterAgent("gsk_UZDP83qNdETfsneAsaoqcvKlnGPiU2c5uqS")
 prompt=input("Prompt")
 file_path="/content/Eco_Paper.pdf"
 router.route(prompt ,file_path)
