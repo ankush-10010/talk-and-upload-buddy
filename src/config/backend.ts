@@ -2,7 +2,7 @@
 // Backend configuration
 // Replace this URL with your actual backend endpoint
 export const BACKEND_CONFIG = {
-  baseUrl: "http://localhost:8000", // Replace with your backend URL
+  baseUrl: "https://b91f-34-16-242-156.ngrok-free.app", // Replace with your backend URL
   endpoints: {
     chat: "/route"
   }

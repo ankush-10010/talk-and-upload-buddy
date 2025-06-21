@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Message } from '@/types/chat';
 import MessageBubble from '@/components/MessageBubble';
@@ -49,14 +48,29 @@ const Index = () => {
     try {
       const response = await sendMessage(content, file);
       
-      const assistantMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        content: response,
-        role: 'assistant',
-        timestamp: new Date(),
-      };
-
-      setMessages(prev => [...prev, assistantMessage]);
+      if (response.text || response.file) {
+        const assistantMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          content: response.text || '',
+          role: 'assistant',
+          timestamp: new Date(),
+          file: response.file ? {
+            name: 'question_paper.pdf',
+            type: response.file.type,
+            url: URL.createObjectURL(response.file)
+          } : undefined,
+        };
+  
+        setMessages(prev => [...prev, assistantMessage]);
+      } else {
+        const errorMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          content: 'Sorry, the assistant did not provide a response.',
+          role: 'assistant',
+          timestamp: new Date(),
+        };
+        setMessages(prev => [...prev, errorMessage]);
+      }
     } catch (error) {
       console.error('Error:', error);
       toast({

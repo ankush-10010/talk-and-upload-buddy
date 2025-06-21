@@ -1,4 +1,3 @@
-
 export interface Message {
   id: string;
   content: string;
@@ -13,4 +12,9 @@ export interface Message {
 
 export interface ChatResponse {
   result: string;
+}
+
+export interface ServiceResponse {
+  text: string | null;
+  file: Blob | null;
 }
