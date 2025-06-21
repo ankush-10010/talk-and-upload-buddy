@@ -7,6 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1BUx5mIoOrJeolSdFuasIHNjZ4X_260nX
 """
 
+"""
+ye wala text de rha hai frontend pe , pdf download karne ka bhi option de rha hai , but download karne pe 
+blank pdf file aarhi hai
+"""
 !pip install faiss-cpu #While using CPu
 
 !pip install pdf2image
