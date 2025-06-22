@@ -63,7 +63,7 @@ class QueryBot:
     def __init__(self,
                  json_file="/content/enchanced_first_year.json",
                  embedding_model="all-MiniLM-L6-v2",
-                 groq_api_key="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",
+                 groq_api_key="gsk_L6hGtYaTct7GEQKzvw8PWEb",
                  model_name="llama-3.1-8b-instant",
                  groq_api_url="https://api.groq.com/openai/v1/chat/completions"):
 
@@ -166,7 +166,7 @@ class QueryBot:
 
 class QuestionPaperBot:
     def __init__(self, groq_api_key=None):
-        self.api_key = groq_api_key or os.getenv("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")
+        self.api_key = groq_api_key or os.getenv("gsk_L67GEQKzvw8PWEb")
         self.client = OpenAI(api_key=self.api_key, base_url="https://api.groq.com/openai/v1")
 
     async def pdf_to_images(self, pdf_path):
@@ -952,7 +952,7 @@ Your input: """
 
         print("\n" + formatted_schedule)
 
-# scheduler_bot=Scheduler("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")
+# scheduler_bot=Scheduler("gsk_UZDPVOcvKlPiU2c5uqS")
 # scheduler_bot.main("i want to make a schedule for today , i have to go to gym for 2hours , study for 3 hours")
 
 import re
@@ -963,7 +963,7 @@ import requests
 
 class RouterAgent:
     def __init__(self, groq_api_key=None, model="llama-3.1-8b-instant"):
-        self.api_key = groq_api_key or os.getenv("gsk_L6hGDma7xThcMjstt7GEQKzvw8PWEb")
+        self.api_key = groq_api_key or os.getenv("gsk_L8PWEb")
         self.api_url = "https://api.groq.com/openai/v1/chat/completions"
         self.model = model
 
@@ -1131,7 +1131,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-router_agent = RouterAgent("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")
+router_agent = RouterAgent("gsk_L6hGDEQKzvw8PWEb")
 #groq api wagera ham code ke andar hi fix kardenge (init ke time i mean)
 @app.post("/route")
 async def route_handler(
@@ -1275,7 +1275,7 @@ async def route_handler(
 import uvicorn
 from pyngrok import ngrok
 import nest_asyncio
-!ngrok authtoken 2xNBjsJZTEMSyZIjuNauqUwXAxK_3YEAxPqFauzLBSHA8EJvn
+!ngrok authtoken 2xNFauzLBSHA8EJvn
 # Allow async in Colab
 nest_asyncio.apply()
 
@@ -1286,7 +1286,7 @@ print("Public URL:", public_url)
 # Run FastAPI server
 uvicorn.run(app, host="0.0.0.0", port=8000)
 
-# router=RouterAgent("gsk_UZDP83qNdETfsneAr4pXeRVOcvKlnGPiU2c5uqS")
+# router=RouterAgent("gsk_UZDc5uqS")
 # prompt=input("Prompt")
 # file_path="/content/question_paper.pdf"
 # router.route(prompt , file=file_path)
