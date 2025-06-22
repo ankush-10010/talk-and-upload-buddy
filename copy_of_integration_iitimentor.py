@@ -1147,7 +1147,7 @@ async def route_handler(
 import uvicorn
 from pyngrok import ngrok
 import nest_asyncio
-!ngrok authtoken 2xNBjsJZXAxK_3YEAxPqFauzLBSHA8EJvn
+!ngrok authtoken 2xNBjsJqFauzLBSHA8EJvn
 # Allow async in Colab
 nest_asyncio.apply()
 
